@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="page-title">Pricing</h1>
+
+  <div class="flex-grid">
+    <% data.pricing_models.each do |p| %>
+      <div class="pricing-card">
+        <div class="pricing-card__header">
+          <h2 class="pricing-card__title pricing-card__title--<%= p.type.downcase %>">
+            <%= p.type %>
+          </h2>
+        </div>
+        <div class="pricing-card__body">
+          <ul class="pricing-card__feature-list">
+            <li><%= p.data %></li>
+            <li><%= p.users %></li>
+            <li><%= p.support %></li>
+          </ul>
+        </div>
+        <span class="pricing-card__cost"><%= p.cost %></span>
+        <a href="#" class="pricing-card__button">Select Plan</a>
+      </div>
+    <% end %>
+  </div>
+</div>

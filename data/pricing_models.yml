@@ -1,0 +1,17 @@
+- type: Personal
+  cost: Free
+  data: 5GB of Data
+  users: 1 User
+  support: 24/7 Support
+
+- type: Business
+  cost: $50
+  data: 10GB of Data
+  users: 20 Users
+  support: 24/7 Support
+
+- type: Enterprise
+  cost: $500
+  data: Unlimited Data
+  users: Unlimited Users
+  support: 24/7 Support
