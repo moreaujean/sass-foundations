@@ -1,0 +1,77 @@
+$pricing-model-colors: (
+  personal: $purple,
+  business: $green,
+  enterprise: $red,
+);
+
+.pricing-card {
+  background-color: $white;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 4px 0 rgba($black, 0.05);
+  flex: 1;
+
+  &:not(:last-of-type) {
+    margin-right: $base-spacing;
+  }
+}
+
+.pricing-card__header {
+  background-color: lighten($light-gray, 10%);
+  border-bottom: $base-border;
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+  padding: $base-spacing;
+}
+
+.pricing-card__title {
+  font-size: 1.75em;
+  margin: 0;
+  text-align: center;
+}
+
+@each $pricing-model, $color in $pricing-model-colors {
+  .pricing-card__title--#{$pricing-model} {
+    color: $color;
+  }
+}
+
+.pricing-card__body {
+  padding: $base-spacing;
+}
+
+.pricing-card__feature-list {
+  line-height: 1.6;
+}
+
+.pricing-card__cost {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: $small-spacing;
+  text-align: center;
+}
+
+.pricing-card__button {
+  background-color: $action-color;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  font-size: $base-font-size;
+  font-weight: 500;
+  letter-spacing: 0.0625em;
+  line-height: 1;
+  margin: $base-spacing;
+  padding: $small-spacing $base-spacing;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: $white;
+  }
+}
